@@ -1,0 +1,235 @@
+/* 化学教学资料站 - 样式表 */
+
+:root {
+  --bg: #f4f7f7;
+  --card: #ffffff;
+  --ink: #1e293b;
+  --muted: #64748b;
+  --teal: #0f766e;
+  --teal-dark: #115e59;
+  --teal-soft: #ccfbf1;
+  --amber: #d97706;
+  --amber-soft: #fef3c7;
+  --line: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 2px 10px rgba(15, 118, 110, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- 页眉 ---- */
+.site-header {
+  background: linear-gradient(135deg, #134e4a 0%, #0f766e 60%, #0d9488 100%);
+  color: #fff;
+  padding: 34px 0 30px;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand { display: flex; align-items: center; gap: 16px; }
+
+.logo {
+  font-size: 44px;
+  background: rgba(255, 255, 255, 0.14);
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.search-box { flex: 1 1 260px; max-width: 380px; }
+
+.search-box input {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+}
+
+.search-box input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+/* ---- 分类标签 ---- */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 22px;
+  padding-bottom: 6px;
+}
+
+.tab {
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tab:hover { border-color: var(--teal); color: var(--teal); }
+
+.tab.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- 资料卡片 ---- */
+.result-count {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 14px 0 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+  padding-bottom: 40px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal-soft);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag {
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.format {
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
+.date { color: var(--muted); font-size: 13px; }
+
+.btn {
+  background: var(--teal);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.btn:hover { background: var(--teal-dark); }
+
+/* ---- 空状态 / 页脚 ---- */
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 60px 0;
+  font-size: 15px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 30px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+  background: var(--card);
+}
+
+@media (max-width: 640px) {
+  .site-header h1 { font-size: 21px; }
+  .logo { width: 58px; height: 58px; font-size: 34px; }
+  .search-box { max-width: none; }
+}
