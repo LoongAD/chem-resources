@@ -228,6 +228,82 @@ body {
   background: var(--card);
 }
 
+/* ---- 在线预览页 ---- */
+.preview-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-bar {
+  background: #134e4a;
+  color: #fff;
+  flex: none;
+}
+
+.preview-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.preview-bar h1 {
+  margin: 0;
+  font-size: 16px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.back-btn,
+.open-new {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex: none;
+}
+
+.back-btn:hover,
+.open-new:hover { background: rgba(255, 255, 255, 0.28); }
+
+.preview-main {
+  flex: 1;
+  position: relative;
+  background: #e8eef0;
+  min-height: 0;
+}
+
+.preview-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 15px;
+  padding: 20px;
+  text-align: center;
+  background: #e8eef0;
+}
+
+#viewer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
 @media (max-width: 640px) {
   .site-header h1 { font-size: 21px; }
   .logo { width: 58px; height: 58px; font-size: 34px; }

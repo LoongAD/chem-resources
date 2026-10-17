@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在线预览</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="preview-page">
+
+<header class="preview-bar">
+  <div class="container preview-bar-inner">
+    <a class="back-btn" href="index.html">← 返回资料站</a>
+    <h1 id="doc-title">正在加载…</h1>
+    <a class="open-new" id="open-new" href="#" target="_blank" rel="noopener">新窗口打开</a>
+  </div>
+</header>
+
+<main class="preview-main">
+  <div class="preview-loading" id="loading">正在加载预览，请稍候…</div>
+  <iframe id="viewer" title="文档在线预览"></iframe>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var q = new URLSearchParams(window.location.search);
+  var src = q.get('src') || '';
+  var title = q.get('title') || '文档预览';
+  document.title = title + ' - 在线预览';
+  document.getElementById('doc-title').textContent = title;
+  var loading = document.getElementById('loading');
+  if (!src) {
+    loading.textContent = '缺少文件参数，请从资料站进入。';
+    return;
+  }
+  var absUrl = new URL(src, window.location.href).href;
+  // PDF 浏览器可直接渲染；Word 文档走 Office 在线预览服务
+  var viewerUrl = /\.pdf$/i.test(src)
+    ? absUrl
+    : 'https://view.officeapps.live.com/op/view.aspx?src=' + encodeURIComponent(absUrl);
+  document.getElementById('open-new').href = viewerUrl;
+  var frame = document.getElementById('viewer');
+  frame.addEventListener('load', function () { loading.style.display = 'none'; });
+  frame.src = viewerUrl;
+  setTimeout(function () {
+    if (loading.style.display !== 'none') {
+      loading.textContent = '加载较慢，请耐心等待，也可以点右上角“新窗口打开”。';
+    }
+  }, 15000);
+})();
+</script>
+</body>
+</html>

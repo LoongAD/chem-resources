@@ -70,7 +70,7 @@
           (r.desc ? '<p class="desc">' + esc(r.desc) + '</p>' : '') +
           '<div class="card-meta">' +
             '<span class="date">' + (r.date ? '更新 ' + esc(r.date) : '') + '</span>' +
-            '<a class="btn" href="' + esc(r.file) + '" download>下载</a>' +
+            '<a class="btn" href="preview.html?src=' + encodeURIComponent(r.file) + '&amp;title=' + encodeURIComponent(r.title) + '">在线预览</a>' +
           '</div>' +
         '</article>'
       );
