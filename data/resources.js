@@ -10,7 +10,7 @@
 const SITE = {
 title: '化学教学资料站',
 subtitle: '初三化学 · 鲁教版',
-teacher: 'X老师'
+teacher: '龙老师'
 };
 
 /* ---- 分类：增、删、改这里，页面标签会自动跟着变 ---- */
@@ -27,36 +27,35 @@ date 更新日期（选填）
 */
 const RESOURCES = [
 {
-title: '第一单元 化学改变了世界 课件',
-category: '课件',
-desc: '配套 PPT，含奇妙的化学、物质的变化与性质两节。',
-file: 'files/课件/示例课件.pptx',
-format: 'PPTX',
-date: '2026-10-10'
-},
-{
-title: '第二单元 探秘水世界 单元测试卷（含答案）',
+title: '第一单元综合素质评价',
 category: '试卷',
-desc: '45 分钟随堂测，覆盖水的组成、电解水实验。',
-file: 'files/试卷/示例试卷.pdf',
-format: 'PDF',
-date: '2026-10-08'
+desc: '覆盖物理变化与化学变化、实验基本操作，多选自中考真题。',
+file: 'files/试卷/第一单元综合素质评价.doc',
+format: 'DOC',
+date: '2026-10-17'
 },
 {
-title: '电解水实验 演示实录',
-category: '实验视频',
-desc: '课堂演示实录，约 4 分钟，可直接投屏播放。',
-file: 'files/实验视频/示例实验.mp4',
-format: 'MP4',
-date: '2026-09-28'
+title: '第二单元综合素质评价',
+category: '试卷',
+desc: '覆盖微粒的构成、元素及元素周期表，多选自中考真题。',
+file: 'files/试卷/第二单元综合素质评价.doc',
+format: 'DOC',
+date: '2026-10-17'
 },
 {
-title: '第五单元 化学方程式配平方法 讲义',
-category: '讲义',
-desc: '观察法、最小公倍数法配平步骤详解，附 10 道练习题。',
-file: 'files/讲义/示例讲义.pdf',
-format: 'PDF',
-date: '2026-09-20'
+title: '第三单元综合素质评价',
+category: '试卷',
+desc: '覆盖溶液的形成、配制与溶解度，多选自中考真题。',
+file: 'files/试卷/第三单元综合素质评价.doc',
+format: 'DOC',
+date: '2026-10-17'
+},
+{
+title: '第四单元综合素质评价',
+category: '试卷',
+desc: '覆盖空气的成分、氧气的性质与制取，多选自中考真题。',
+file: 'files/试卷/第四单元综合素质评价.doc',
+format: 'DOC',
+date: '2026-10-17'
 }
-// 上传真实文件后，删掉上面的示例条目，换成你自己的。
 ];
