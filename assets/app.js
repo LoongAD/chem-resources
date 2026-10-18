@@ -61,7 +61,7 @@
 
     grid.innerHTML = list.map(function (r) {
       return (
-        '<article class="card">' +
+        '<article class="card" data-cat="' + esc(r.category) + '">' +
           '<div class="card-top">' +
             '<span class="tag" data-cat="' + esc(r.category) + '">' + esc(r.category) + '</span>' +
             (r.format ? '<span class="format">' + esc(r.format) + '</span>' : '') +
