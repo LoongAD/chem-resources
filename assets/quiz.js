@@ -50,10 +50,13 @@
       var rec = h[qz.id];
       var best = rec ? '<span class="best">历史最佳 ' + rec.best + ' 分</span>' : '<span class="best none">还未作答</span>';
       return '<article class="card quiz-card">' +
+        '<div class="card-cover quiz-cover"><span>📝</span></div>' +
+        '<div class="card-body">' +
         '<h3>' + esc(qz.title) + '</h3>' +
         '<p class="desc">' + esc(qz.desc || '') + '</p>' +
         '<div class="card-meta"><span class="date">' + qz.questions.length + ' 道题</span>' + best +
         '<button class="btn" type="button" data-start="' + esc(qz.id) + '">开始</button></div>' +
+        '</div>' +
         '</article>';
     }).join('');
     var btns = quizListEl.querySelectorAll('[data-start]');
