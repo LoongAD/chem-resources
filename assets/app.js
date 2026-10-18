@@ -63,7 +63,7 @@
       return (
         '<article class="card">' +
           '<div class="card-top">' +
-            '<span class="tag">' + esc(r.category) + '</span>' +
+            '<span class="tag" data-cat="' + esc(r.category) + '">' + esc(r.category) + '</span>' +
             (r.format ? '<span class="format">' + esc(r.format) + '</span>' : '') +
           '</div>' +
           '<h3>' + esc(r.title) + '</h3>' +
