@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在线小测 - 化学教学资料站</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">📝</div>
+      <div>
+        <h1>在线小测</h1>
+        <p class="subtitle">初三化学 · 鲁教版 —— 随堂自测，即时判分</p>
+      </div>
+    </div>
+    <a class="quiz-link" href="index.html">← 资料站</a>
+  </div>
+</header>
+
+<main class="container">
+  <!-- 自测列表 -->
+  <section id="view-list">
+    <p class="result-count">选择一套自测开始答题，成绩保存在本机浏览器</p>
+    <div class="grid" id="quiz-list"></div>
+  </section>
+
+  <!-- 答题 -->
+  <section id="view-quiz" hidden>
+    <div class="quiz-head">
+      <button class="tab" id="btn-back-list" type="button">← 返回</button>
+      <h2 id="quiz-title"></h2>
+    </div>
+    <div id="questions"></div>
+    <div class="quiz-actions">
+      <button class="btn btn-big" id="btn-submit" type="button">交卷判分</button>
+    </div>
+  </section>
+
+  <!-- 成绩与解析 -->
+  <section id="view-result" hidden>
+    <div class="quiz-head">
+      <button class="tab" id="btn-back-list2" type="button">← 返回</button>
+      <h2 id="result-title"></h2>
+    </div>
+    <div class="score-card">
+      <div class="score-num" id="score-num"></div>
+      <div class="score-sub" id="score-sub"></div>
+    </div>
+    <div id="review"></div>
+    <div class="quiz-actions">
+      <button class="btn btn-big" id="btn-retry" type="button">再测一次</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><span>© 龙老师 · 本站资料仅供教学使用</span></div>
+</footer>
+
+<script src="data/quiz.js"></script>
+<script src="assets/quiz.js"></script>
+</body>
+</html>
