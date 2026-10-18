@@ -10,34 +10,54 @@
 <body>
 
 <header class="site-header">
-  <div class="mol-float" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">⚗️</div>
-      <div>
-        <h1 id="site-title">化学教学资料站</h1>
-        <p class="subtitle" id="site-subtitle"></p>
-      </div>
-    </div>
+  <nav class="top-nav container">
+    <div class="nav-brand"><span class="nav-logo">⚗️</span>化学教学资料站</div>
+    <a class="quiz-link" href="quiz.html">📝 在线小测</a>
+  </nav>
+  <div class="hero container">
+    <h1 id="site-title">化学教学资料站</h1>
+    <p class="subtitle" id="site-subtitle"></p>
     <div class="search-box">
       <input id="search" type="search" placeholder="搜索资料标题、关键词…" autocomplete="off">
     </div>
-    <a class="quiz-link" href="quiz.html">📝 在线小测</a>
   </div>
 </header>
 
-<nav class="container tabs" id="tabs" aria-label="资料分类"></nav>
+<div class="container layout">
+  <main class="content">
+    <nav class="tabs" id="tabs" aria-label="资料分类"></nav>
+    <p class="result-count" id="count"></p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <p>没有找到相关资料，换个关键词试试。</p>
+    </div>
+  </main>
 
-<main class="container">
-  <p class="result-count" id="count"></p>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty" hidden>
-    <p>没有找到相关资料，换个关键词试试。</p>
-  </div>
-</main>
+  <aside class="sidebar">
+    <section class="side-card teacher-card">
+      <div class="teacher-avatar">⚗️</div>
+      <h3>龙老师</h3>
+      <p class="teacher-sub">初三化学 · 鲁教版</p>
+      <div class="side-stats">
+        <div><b id="stat-total">–</b><span>份资料</span></div>
+        <div><b id="stat-cats">–</b><span>个分类</span></div>
+      </div>
+    </section>
+    <section class="side-card">
+      <h4>📢 公告</h4>
+      <p>资料持续更新中，期中期末真题会第一时间上架。缺什么资料，直接告诉龙老师。</p>
+    </section>
+    <section class="side-card quiz-promo">
+      <h4>📝 在线小测</h4>
+      <p>随堂自测、即时判分，测测你掌握得怎么样。</p>
+      <a class="btn" href="quiz.html">开始自测</a>
+    </section>
+  </aside>
+</div>
 
 <footer class="site-footer">
   <div class="container">
+    <p class="footer-quote">化学改变了世界</p>
     <span id="footer-text"></span>
   </div>
 </footer>
