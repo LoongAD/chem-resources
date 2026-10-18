@@ -328,7 +328,7 @@ body {
   margin: 22px 0 6px;
 }
 
-.quiz-head .btn {
+.quiz-head .tab {
   flex: none;
   white-space: nowrap;
 }
