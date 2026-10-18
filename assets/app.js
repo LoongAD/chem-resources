@@ -59,9 +59,12 @@
     countEl.textContent = '共 ' + list.length + ' 份资料';
     emptyEl.hidden = list.length !== 0;
 
+    var icons = {'课件': '📊', '试卷': '📝', '实验视频': '🎬', '讲义': '📖'};
     grid.innerHTML = list.map(function (r) {
       return (
         '<article class="card" data-cat="' + esc(r.category) + '">' +
+          '<div class="card-cover"><span>' + (icons[r.category] || '📄') + '</span></div>' +
+          '<div class="card-body">' +
           '<div class="card-top">' +
             '<span class="tag" data-cat="' + esc(r.category) + '">' + esc(r.category) + '</span>' +
             (r.format ? '<span class="format">' + esc(r.format) + '</span>' : '') +
@@ -72,10 +75,17 @@
             '<span class="date">' + (r.date ? '更新 ' + esc(r.date) : '') + '</span>' +
             '<a class="btn" href="preview.html?src=' + encodeURIComponent(r.file) + '&amp;title=' + encodeURIComponent(r.title) + '">在线预览</a>' +
           '</div>' +
+          '</div>' +
         '</article>'
       );
     }).join('');
   }
+
+  // 侧边栏统计
+  var statTotal = document.getElementById('stat-total');
+  if (statTotal) statTotal.textContent = RESOURCES.length;
+  var statCats = document.getElementById('stat-cats');
+  if (statCats) statCats.textContent = CATEGORIES.length;
 
   render();
 })();
