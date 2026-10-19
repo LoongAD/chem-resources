@@ -485,8 +485,10 @@ a { color: inherit; }
   .stack { font-size: 19vw; white-space: normal; }
   .topbar-links a:not(.btn-accent) { display: none; }
   .cta { min-height: 80svh; }
-  .quiz-row { grid-template-columns: 1fr 20px; }
+  .quiz-row { grid-template-columns: 1fr 24px; gap: 6px 12px; }
+  .qr-title { grid-column: 1 / -1; font-size: 18px; text-wrap: balance; }
   .qr-meta, .qr-best { grid-column: 1; }
+  .quiz-row .row-arrow { grid-column: 2; grid-row: 2 / 5; align-self: center; }
   .app-canvas { padding: 32px 20px 72px; }
 }
 
