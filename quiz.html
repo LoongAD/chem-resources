@@ -3,65 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>在线小测 - 化学教学资料站</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<title>在线小测｜化学教学资料站</title>
+<meta name="description" content="初三化学在线小测：4 套单元自测，即时判分，逐题解析。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b11226'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>化</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="site-header site-header-slim">
-  <nav class="top-nav container">
-    <div class="nav-brand"><span class="nav-logo">📝</span>在线小测</div>
-    <a class="quiz-link" href="index.html">← 资料站</a>
-  </nav>
-  <div class="hero container">
-    <h1>在线小测</h1>
-    <p class="subtitle">初三化学 · 鲁教版 —— 随堂自测，即时判分</p>
-  </div>
+<header class="app-topbar">
+  <a class="back" href="index.html">← 资料站</a>
+  <span class="wordmark">龙老师 · 化学资料站</span>
 </header>
 
-<main class="container">
-  <!-- 自测列表 -->
+<main class="app-canvas">
+  <!-- 列表 -->
   <section id="view-list">
-    <p class="result-count">选择一套自测开始答题，成绩保存在本机浏览器</p>
-    <div class="grid" id="quiz-list"></div>
+    <h1 class="app-title">在线小测</h1>
+    <p class="app-sub" id="quiz-sub"></p>
+    <div class="qz-list" id="quiz-list"></div>
   </section>
 
   <!-- 答题 -->
   <section id="view-quiz" hidden>
-    <div class="quiz-head">
-      <button class="tab" id="btn-back-list" type="button">← 返回</button>
+    <div class="q-head">
       <h2 id="quiz-title"></h2>
+      <span class="q-progress" id="quiz-progress"></span>
     </div>
     <div id="questions"></div>
-    <div class="quiz-actions">
-      <button class="btn btn-big" id="btn-submit" type="button">交卷判分</button>
+    <div class="q-actions">
+      <button class="btn-accent btn-lg" id="btn-submit" type="button">交卷判分</button>
     </div>
+    <p style="text-align:center"><button class="btn-ghost" id="btn-back-list" type="button">← 返回列表</button></p>
   </section>
 
-  <!-- 成绩与解析 -->
+  <!-- 成绩 -->
   <section id="view-result" hidden>
-    <div class="quiz-head">
-      <button class="tab" id="btn-back-list2" type="button">← 返回</button>
-      <h2 id="result-title"></h2>
-    </div>
-    <div class="score-card">
-      <div class="score-num" id="score-num"></div>
-      <div class="score-sub" id="score-sub"></div>
+    <div class="score-hero">
+      <div class="score num" id="score-num"></div>
+      <p class="score-sub" id="score-sub"></p>
     </div>
     <div id="review"></div>
-    <div class="quiz-actions">
-      <button class="btn btn-big" id="btn-retry" type="button">再测一次</button>
+    <div class="q-actions">
+      <button class="btn-accent btn-lg" id="btn-retry" type="button">再测一次</button>
     </div>
+    <p style="text-align:center"><button class="btn-ghost" id="btn-back-list2" type="button">← 返回列表</button></p>
   </section>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p class="footer-quote">化学改变了世界</p>
-    <span>© 龙老师 · 本站资料仅供教学使用</span>
-  </div>
-</footer>
 
 <script src="data/quiz.js"></script>
 <script src="assets/quiz.js"></script>

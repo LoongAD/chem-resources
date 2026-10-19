@@ -3,66 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>化学教学资料站</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚗️</text></svg>">
+<title>化学教学资料站｜初三化学 · 鲁教版</title>
+<meta name="description" content="龙老师的初三化学教学资料站：鲁教版，38 份单元试卷在线预览，4 套在线小测即时判分。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b11226'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>化</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <nav class="top-nav container">
-    <div class="nav-brand"><span class="nav-logo">⚗️</span>化学教学资料站</div>
-    <a class="quiz-link" href="quiz.html">📝 在线小测</a>
-  </nav>
-  <div class="hero container">
-    <h1 id="site-title">化学教学资料站</h1>
-    <p class="subtitle" id="site-subtitle"></p>
-    <div class="search-box">
-      <input id="search" type="search" placeholder="搜索资料标题、关键词…" autocomplete="off">
-    </div>
+<nav class="topbar" aria-label="主导航">
+  <a class="wordmark" href="index.html">龙老师 · 化学资料站</a>
+  <div class="topbar-links">
+    <a href="#resources">资料</a>
+    <a href="#quiz">在线小测</a>
+    <a class="btn-accent btn-sm" href="quiz.html">开始自测</a>
   </div>
+</nav>
+
+<header class="hero">
+  <h1 class="sentence" aria-label="化学改变了世界">
+    <span class="s-half s-left">化学</span>
+    <span class="s-frame"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Chemicals_in_flasks.jpg/1920px-Chemicals_in_flasks.jpg" alt="试剂瓶中盛着颜色各异的化学试剂" width="1920" height="1704" fetchpriority="high"></span>
+    <span class="s-half s-right">改变了世界</span>
+  </h1>
+  <p class="lede">初三化学 · 鲁教版。<span class="num">38</span> 份单元试卷在线预览，<span class="num">4</span> 套小测即时判分，全部免费。</p>
+  <form class="hero-search" role="search" action="#resources">
+    <input id="search" type="search" placeholder="搜试卷标题、关键词…" autocomplete="off" aria-label="搜索资料">
+  </form>
 </header>
 
-<div class="container layout">
-  <main class="content">
-    <nav class="tabs" id="tabs" aria-label="资料分类"></nav>
-    <p class="result-count" id="count"></p>
-    <div class="grid" id="grid"></div>
-    <div class="empty" id="empty" hidden>
-      <p>没有找到相关资料，换个关键词试试。</p>
-    </div>
-  </main>
-
-  <aside class="sidebar">
-    <section class="side-card teacher-card">
-      <div class="teacher-avatar">⚗️</div>
-      <h3>龙老师</h3>
-      <p class="teacher-sub">初三化学 · 鲁教版</p>
-      <div class="side-stats">
-        <div><b id="stat-total">–</b><span>份资料</span></div>
-        <div><b id="stat-cats">–</b><span>个分类</span></div>
+<main>
+  <section class="sec-list" id="resources" aria-labelledby="h-resources">
+    <h2 id="h-resources" class="sec-head"><span class="indent">试卷</span>全收录</h2>
+    <div class="list-grid">
+      <figure class="list-photo">
+        <img src="https://images.metmuseum.org/CRDImages/ph/web-large/DP-43933-001.jpg" alt="1856 年，一位化学家与他的实验器具" width="1200" height="917" loading="lazy">
+        <figcaption>化学实验，古已有之</figcaption>
+      </figure>
+      <div class="list-main">
+        <p class="table-word">资料</p>
+        <div class="tabs" id="tabs" role="tablist" aria-label="资料分类"></div>
+        <p class="result-count" id="count"></p>
+        <div class="rows" id="grid"></div>
+        <div class="empty" id="empty" hidden>
+          <p>没有找到相关资料，换个关键词试试。</p>
+        </div>
       </div>
-    </section>
-    <section class="side-card">
-      <h4>📢 公告</h4>
-      <p>资料持续更新中，期中期末真题会第一时间上架。缺什么资料，直接告诉龙老师。</p>
-    </section>
-    <section class="side-card quiz-promo">
-      <h4>📝 在线小测</h4>
-      <p>随堂自测、即时判分，测测你掌握得怎么样。</p>
-      <a class="btn" href="quiz.html">开始自测</a>
-    </section>
-  </aside>
-</div>
+    </div>
+  </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <p class="footer-quote">化学改变了世界</p>
-    <span id="footer-text"></span>
+  <section class="sec-quiz" id="quiz" aria-labelledby="h-quiz">
+    <h2 id="h-quiz" class="stack" aria-label="学完就测">
+      <span class="stack-l1">学完</span>
+      <span class="stack-l2">就测</span>
+    </h2>
+    <div class="quiz-obj">
+      <div class="live-quiz" id="live-quiz">
+        <p class="live-title">随手一测</p>
+        <p class="live-q" id="live-q"></p>
+        <div class="live-opts" id="live-opts"></div>
+        <p class="live-feedback" id="live-feedback" aria-live="polite"></p>
+        <div class="live-foot">
+          <button class="btn-ghost" id="live-next" type="button">换一题</button>
+          <a class="live-more" href="quiz.html">去小测页 →</a>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-facts">
+      <p>四套单元小测，每套十道题。选择、填空，即时判分，逐题解析，最高分存在你的浏览器里。</p>
+    </div>
+    <div class="quiz-rows" id="quiz-rows"></div>
+  </section>
+
+  <section class="cta" aria-labelledby="h-cta">
+    <h2 id="h-cta">从一题开始</h2>
+    <div class="cta-foot">
+      <p>四套小测全部免费，不用注册，打开就做。</p>
+      <a class="btn-accent btn-lg" href="quiz.html">开始自测</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="foot-notes">
+    <p>初三化学 · 鲁教版</p>
+    <p>本站资料仅供教学使用</p>
+  </div>
+  <p class="foot-big" aria-label="龙老师">龙老师</p>
+  <div class="foot-meta">
+    <a href="#top">回到顶部 ↑</a>
+    <p class="credits">图片：<a href="https://commons.wikimedia.org/wiki/File:Chemicals_in_flasks.jpg">“Chemicals in flasks”</a> by Joe Sullivan, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons；<a href="https://www.metmuseum.org/art/collection/search/283831">“[Alfred Marshall Mayer with Chemistry Equipment]”</a>（1856），<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>，via 大都会艺术博物馆</p>
+    <p>© <span id="year">2026</span></p>
   </div>
 </footer>
 
 <script src="data/resources.js"></script>
+<script src="data/quiz.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
